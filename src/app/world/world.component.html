@@ -1,0 +1,18 @@
+<div class="map-container">
+    <div class="column map" (click)="onMapClick($event)">
+    </div>
+
+    <div class="column info">
+        <div *ngIf="countryData">
+            <p><strong>Country:</strong> {{ countryData.name }}</p>
+            <p><strong>Capital:</strong> {{ countryData.capitalCity }}</p>
+            <p><strong>Region:</strong> {{ countryData.region.value }}</p>
+            <p><strong>Income Level:</strong> {{ countryData.incomeLevel.value }}</p>
+            <p><strong>Longitude:</strong> {{ countryData.longitude }}</p>
+            <p><strong>Latitude:</strong> {{ countryData.latitude }}</p>
+        </div>
+        <div *ngIf="!countryData">
+            <p>Click on a country on the map.</p>
+        </div>
+    </div>
+</div>
